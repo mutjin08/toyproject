@@ -64,7 +64,11 @@ public class WordQuiz{
             int example[]=new int[4];
             int answerLoc = makeExample(example, answerIndex); 
             example[answerLoc]=answerIndex;
-        
+
+            System.out.println(eng + "?");
+            for(int i=0; i<example.length; i++)
+                System.out.print("(" + (i+1) + ")" + v.get(example[i]).getKorean() + " ");
+            
         
             System.out.print(":>"); 
             try {
@@ -91,12 +95,9 @@ public class WordQuiz{
         scanner.close();
     }
     
-    public void main(String[] args){
+    public static void main(String[] args){
         WordQuiz quiz=new WordQuiz();
         quiz.run();
     }
+
 }
-
-
-            
-
